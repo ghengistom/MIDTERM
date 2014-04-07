@@ -1,0 +1,60 @@
+import java.util.Scanner; //gets scanner library
+
+public class MidTerm
+{
+	public static void main(String[] args)
+	{
+		int randomNum;
+		int Player1=0, Player2=0, Games=0, Modded, Modded2;
+		Scanner input = new Scanner(System.in);
+
+
+		int Cont=1;
+		while (Cont!=0)
+		{
+			System.out.print("Player 1 guess what the random number generator is odd or even.(1 for odd 0 for even");
+			int userinput=input.nextInt();
+			randomNum = 0 + (int)(Math.random()*100); 
+			Modded=randomNum%2;
+			if (userinput==Modded)
+			{
+				System.out.println("Correct");
+				Player1++;
+				
+			}
+			else 
+			{
+				System.out.println("Wrong");
+				
+			}
+// PLAYER TWO
+			System.out.print("Player 2 guess what the random number generator is odd or even.(1 for odd 0 for even");
+			int userinput2=input.nextInt();
+			randomNum = 0 + (int)(Math.random()*100); 
+			Modded2=randomNum%2;
+			if (userinput2==Modded2)
+			{
+				System.out.println("Correct");
+				Player2++;
+				
+			}
+			else 
+			{
+				System.out.println("Wrong");
+				
+			}
+			//CONTINUE ???
+			System.out.println("Continue? (1=yes  0=no)");
+			Games++;
+			Cont = input.nextInt();
+		}
+		System.out.println("Your number of wins for player 1 are: ");
+		System.out.println(Player1);
+		System.out.println("The number of wins for player 2 are: ");
+		System.out.println(Player2);
+		System.out.println("The total number of games are: ");
+		System.out.println(Games);
+		//System.out.println(loop);
+	}
+
+}
